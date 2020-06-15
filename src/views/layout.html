@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<!-- 
+    Hyper text 
+        Hiper texto
+        
+    Markup
+        Marcação de texto
+        
+    Language
+        Linguagem
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoleta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+
+    {% block styles%} 
+    {%endblock styles%}
+    
+<link rel="stylesheet" href="Styles/main.css">
+<link rel="stylesheet" href="Styles/Responsive.css">
+
+</head>
+
+<body>
+
+
+    <div id="{{ pageId }}"> {# variável do nunjucks #}
+        {% block content %}
+        {% endblock content %}
+    </div>
+    
+    {% block modal %}
+    {% endblock modal %}
+
+    {% block Scripts %}
+    {% endblock Scripts %}
+</body>
+
+</html>
